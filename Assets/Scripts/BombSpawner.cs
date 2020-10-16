@@ -7,13 +7,13 @@ public class BombSpawner : MonoBehaviour
 {
     public Tilemap tilemap;
     public GameObject bombPrefab;
+    public GameObject player;
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            Vector3 worldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            Vector3Int cell = tilemap.WorldToCell(worldPos);
+            Vector3Int cell = tilemap.WorldToCell(player.transform.position);
             Vector3 cellCenterPos = tilemap.GetCellCenterWorld(cell);
 
             Instantiate(bombPrefab, cellCenterPos, Quaternion.identity);

@@ -286,6 +286,7 @@ MonoBehaviour:
   tilemap: {fileID: 2020938080}
   bombPrefab: {fileID: 9017594075806478431, guid: 35988a87ac9284f398d45dc279c7f016,
     type: 3}
+  player: {fileID: 9085930}
 --- !u!4 &450488482
 Transform:
   m_ObjectHideFlags: 0
